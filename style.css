@@ -187,7 +187,7 @@ input:focus {
   font-family: Poppins;
   font-size: 16px;
 }
-.card-input input {
+.transfer-money input {
   margin-top: 40px;
   color: #9b96b7;
   font-family: Poppins;
@@ -197,7 +197,7 @@ input:focus {
   padding: 0 0 6px 0;
 }
 
-.card-button {
+.sending {
   margin-top: 40px;
   width: 100%;
   border-radius: 6px;
@@ -280,10 +280,10 @@ input:focus {
   border-radius: 3px;
   background: #9b96b7;
 }
-.historiy-card {
+.history-card {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 15px;
 }
 
 .historiy-card-itme {
