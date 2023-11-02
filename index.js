@@ -14,6 +14,14 @@ const karta = document.querySelector(".karta-raqami");
 const summa = document.querySelector(".summa");
 const sending = document.querySelector(".sending");
 const incirement = document.querySelector(".incirement-value");
+const user = document.querySelector(".user-name");
+const users = document.querySelector(".user");
+const cardnum = document.querySelector(".card-Num");
+
+// factions
+
+const cardNum = () => {};
+
 const createElement = () => {
   sending.addEventListener("click", (e) => {
     e?.preventDefault();
@@ -30,22 +38,28 @@ const createElement = () => {
         
         `
     );
+    summa.value = "";
   });
 };
 
 register.addEventListener("click", (e) => {
   e?.preventDefault();
-  const em = email.value;
-  const kod = parol.value;
-  if (kod === "asadbek07" && em === "asadbekboqiyev8@gmail.com") {
-    navbar.classList.add("hidden");
-    mainNavbar.classList.remove("hidden");
-    exit?.addEventListener("click", (e) => {
-      mainNavbar.classList.add("hidden");
-      main.classList.remove("hidden");
-    });
-    createElement();
-  } else {
-    alert("Noto`g`ri malumot");
+  user.insertAdjacentHTML("afterbegin", email.value);
+  users.insertAdjacentHTML("afterbegin", `${email.value}    `);
+  const userPasword = parol.value;
+  navbar.classList.add("hidden");
+  mainNavbar.classList.remove("hidden");
+  main.classList.remove("hidden");
+
+  exit?.addEventListener("click", (e) => {
+    mainNavbar.classList.add("hidden");
+    main.classList.add("hidden");
+    navbar.classList.remove("hidden");
+  });
+  createElement();
+  switch (userPasword) {
+    case `asadbek07`:
+      cardnum.break;
   }
+  email.value = "";
 });
