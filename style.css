@@ -69,7 +69,7 @@ a {
   gap: 20px;
 }
 
-.login-page input:placeholder {
+.login-page input::placeholder {
   color: var(--inputColor);
 }
 .login-page input {
