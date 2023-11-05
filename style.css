@@ -23,6 +23,7 @@
 
 body {
   font-family: Poppins, sans-serif;
+  overflow-x: hidden;
 }
 
 .container {
@@ -69,7 +70,7 @@ a {
   gap: 20px;
 }
 
-.login-page input::placeholder {
+.login-page input:placeholder {
   color: var(--inputColor);
 }
 .login-page input {
@@ -270,6 +271,46 @@ section h2 {
   display: flex;
   align-items: center;
   gap: 20px;
+}
+
+/* table */
+
+.table-box {
+  overflow-x: scroll;
+  padding: 20px 30px;
+  margin: 70px auto;
+}
+
+table {
+  margin: 0 auto;
+}
+
+table,
+thead,
+tr,
+td,
+th,
+tbody {
+  border-collapse: collapse;
+  border: 1px solid var(--primaryColor);
+}
+
+thead {
+  background-color: var(--backRed);
+}
+
+td,
+th {
+  padding: 10px 25px;
+  font-size: 18px;
+}
+
+tbody tr:nth-child(even) {
+  background-color: var(--backGreen);
+}
+
+tbody tr:hover {
+  background-color: rgba(128, 128, 128, 0.508);
 }
 
 /* 324567890-987654 */
