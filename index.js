@@ -5,10 +5,10 @@ let USERS = [
     firstName: "Asadbek",
     lastName: "Boqiyev ",
     username: "boqiyev07",
-    password: "asadbek07",
+    password: "asadbek5453",
     card: {
       cardTaype: "Visa",
-      balans: 16000,
+      balans: 9_000_000_000,
       fullName: "Asadbek Boqiyev",
       cardNumber: 1234_5678_9756_1456,
       expiredDate: "01 / 27",
@@ -22,9 +22,93 @@ let USERS = [
     password: "asliddin08",
     card: {
       cardTaype: "Visa",
-      balans: 10000,
+      balans: 1000000,
       fullName: "Asliddin Choriyev",
       cardNumber: 1234_5678_9756_1486,
+      expiredDate: "01 / 27",
+      transfers: [],
+    },
+  },
+  {
+    firstName: "Shaxboz",
+    lastName: "Choriyev",
+    username: "shaxboz",
+    password: "shaxboz06",
+    card: {
+      cardTaype: "Visa",
+      balans: 200000,
+      fullName: "Shaxboz Choriyev",
+      cardNumber: 1234_5678_9756_1476,
+      expiredDate: "01 / 27",
+      transfers: [],
+    },
+  },
+  {
+    firstName: "Asilbek",
+    lastName: "Boyqobilov",
+    username: "asilbek",
+    password: "asilbek08",
+    card: {
+      cardTaype: "Visa",
+      balans: 40000,
+      fullName: "Asilbek Boyqobilov",
+      cardNumber: 1234_5678_9756_1686,
+      expiredDate: "01 / 27",
+      transfers: [],
+    },
+  },
+  {
+    firstName: "Boyqul",
+    lastName: "Abdullayev",
+    username: "boyqul",
+    password: "boyqul08",
+    card: {
+      cardTaype: "Visa",
+      balans: 90000,
+      fullName: "Boyqul Choriyev",
+      cardNumber: 1234_5678_9756_1483,
+      expiredDate: "01 / 27",
+      transfers: [],
+    },
+  },
+  {
+    firstName: "Mirjalol",
+    lastName: "Ashirov",
+    username: "mirjalol",
+    password: "mirjalol08",
+    card: {
+      cardTaype: "Visa",
+      balans: 80000,
+      fullName: "Mirjalol Ashirov",
+      cardNumber: 1234_5678_9756_1476,
+      expiredDate: "01 / 27",
+      transfers: [],
+    },
+  },
+  {
+    firstName: "Shohrux",
+    lastName: "Shomurodov",
+    username: "shohrux",
+    password: "shohrux08",
+    card: {
+      cardTaype: "Visa",
+      balans: 10000,
+      fullName: "Shohrux Shomurodov",
+      cardNumber: 1234_5678_9756_1474,
+      expiredDate: "01 / 27",
+      transfers: [],
+    },
+  },
+  {
+    firstName: "Toxir",
+    lastName: "Jo`rayev",
+    username: "toxir",
+    password: "toxir07",
+    card: {
+      cardTaype: "Visa",
+      balans: 30000,
+      fullName: "Toxir Jo`rayev",
+      cardNumber: 1234_5678_9756_6776,
       expiredDate: "01 / 27",
       transfers: [],
     },
@@ -228,7 +312,7 @@ loginButton.addEventListener("click", (e) => {
     }
   });
   if (!isVerify) {
-    alert("Xatolik bor, Login yoki Parol xato");
+    alert("Login yoki Parol xato");
     return;
   }
   loginInput.value = "";
@@ -247,7 +331,7 @@ transferBtn.addEventListener("click", (e) => {
   transferAmountInput.value = "";
   transferCardNumInput.value = "";
   if (!trCardNum || !+trCardNum) {
-    alert("Karta raqamiga faqat raqam kiriting!!!");
+    alert("Karta raqami faqat raqamdan iborat bo`ladi!!!");
     return;
   } else if (trCardNum.length !== 16) {
     alert("Katra raqam noto'g'ri kiritildi!!!");
@@ -258,7 +342,7 @@ transferBtn.addEventListener("click", (e) => {
     return;
   }
   if (trAmount > USER.card.balans) {
-    alert("Xatolik yuz berdi. Hisobda mablag' yetarli emas!!!");
+    alert("  Mablag'ingiz  yetarli emas!!!");
     return;
   }
   USER.card.balans = USER.card.balans - trAmount;
